@@ -5,7 +5,7 @@
 <h1 align="center">知 几</h1>
 
 <p align="center">
-  <em>A Feishu bot that remembers, thinks, and acts — powered by Claude.</em>
+  <em>An AI agent that remembers, thinks, and acts on its own.</em>
 </p>
 
 <p align="center">
