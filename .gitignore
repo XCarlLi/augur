@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+*.egg-info/
+
+# Runtime data (logs, user memory, scratch files)
+data/chats/
+data/users/
+
+# Secrets
+config.toml
+.env
