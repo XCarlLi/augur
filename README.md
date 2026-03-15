@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/logo.png" width="120" alt="知几">
+</p>
+
 <h1 align="center">知 几</h1>
 
 <p align="center">
