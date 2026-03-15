@@ -36,7 +36,7 @@
 
 ## 快速开始
 
-**环境要求：** Python 3.12+, [Claude agent SDK](https://github.com/anthropics/claude-agent-sdk-python)
+**环境要求：** Python 3.12+
 
 ```bash
 # 克隆
