@@ -77,73 +77,7 @@ __main__.py ────► feishu.py                 │  将来: dingtalk.py, 
       └── prompt.py         ┘
 ```
 
-### 数据目录
 
-```
-data/
-├── users/{sender_id}/              # 每用户独立
-│   ├── identity/                   # Full Load — 每次完整注入
-│   │   ├── soul.md                 #   性格定义
-│   │   ├── profile.md              #   用户信息
-│   │   └── rules/                  #   行为规则
-│   ├── knowledge/                  # Index Load — 首行摘要
-│   │   ├── insights.md             #   认知积累
-│   │   ├── topics/                 #   领域知识沉淀
-│   │   └── summaries/              #   月度摘要
-│   ├── journal/                    # Path Load — 近 14 天路径
-│   │   ├── diary/                  #   每日日记
-│   │   └── exploration/            #   探索笔记
-│   ├── souls/                      #   多性格切换
-│   └── settings.json               #   运行时开关
-├── chats/{chat_id}/
-│   ├── log.jsonl                   # 对话日志
-│   └── scratch/                    # 工作目录
-└── templates/souls/                # 默认性格模板
-```
-
-### Prompt 构建流
-
-系统提示由两部分拼接 —— 核心层所有平台共用，平台层可替换：
-
-```
-┌────────────────────────────────┐
-│  Core Prompt（平台无关）        │
-│  1. Identity (Full Load)       │
-│  2. Active Soul                │
-│  3. Knowledge Index            │
-│  4. Journal Paths (14d)        │
-│  5. Context + Recent Log       │
-├────────────────────────────────┤
-│  Platform Prompt（可替换）      │
-│  · 飞书 CLI 文档               │
-│  · 消息格式说明                 │
-└────────────────────────────────┘
-```
-
----
-
-## 自主 Agent
-
-知几在无人交互时也在工作。所有 Agent 受限运行：不能修改代码、不能执行危险命令、只能写入指定目录。
-
-| Agent | 职责 | 输出 |
-|-------|------|------|
-| **晨间摘要** | 拉取飞书日历 + 任务，生成当日提醒 | 发送到 DM |
-| **自主探索** | 晨读深度阅读 / 午间时事 / 傍晚自由思考 | 有发现则分享，否则静默 |
-| **夜间日记** | 从当日对话生成日记，沉淀重要发现到 `knowledge/topics/` | 静默写入 |
-| **月度摘要** | 每月 1 号汇总上月日记和探索 | 写入 `knowledge/summaries/` |
-
-### 知识沉淀模型
-
-```
-journal/diary/ (14天窗口)
-    │
-    ├── 重要发现 ──► knowledge/topics/ (永久索引)
-    │
-    └── 月度汇总 ──► knowledge/summaries/ (永久索引)
-```
-
-日记 Agent 每晚运行时判断：今天有没有值得长期记住的认知变化？有则沉淀，没有则什么都不做。大部分日子什么都不做。
 
 ---
 
@@ -178,19 +112,6 @@ default_soul = "balanced"
 | `开启晨报` / `关闭晨报` | 切换晨间摘要 |
 | `状态` | 查看所有开关 |
 | `stop` | 中止当前任务 |
-
----
-
-## 设计哲学
-
-> *Do one thing well.* — Unix Philosophy
->
-> *Bad programmers worry about the code. Good programmers worry about data structures and their relationships.* — Linus Torvalds
-
-- **数据结构优先** — 目录名即加载策略（`identity/` = full, `knowledge/` = index, `journal/` = paths）
-- **每个文件一个职责** — 全部模块 ≤ 200 行
-- **不为未来设计** — 没有 `AbstractFactoryProvider`，只有解决当前问题的最简代码
-- **消除特殊情况** — 通过更好的抽象，而非 `if/elif` 堆砌
 
 ---
 
