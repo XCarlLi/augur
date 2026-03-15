@@ -5,6 +5,22 @@
 </p>
 
 <p align="center">
+  <a href="#快速开始"><img src="https://img.shields.io/badge/Quick_Start-5_MIN-blue?style=flat-square" alt="Quick Start"></a>
+  <a href="#特性"><img src="https://img.shields.io/badge/Features-6_Modules-green?style=flat-square" alt="Features"></a>
+  <a href="#自主-agent"><img src="https://img.shields.io/badge/Agents-4_Autonomous-orange?style=flat-square" alt="Agents"></a>
+  <a href="#配置"><img src="https://img.shields.io/badge/License-MIT-gray?style=flat-square" alt="License"></a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/python-≥3.12-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/claude--code--sdk-latest-6B4FBB?style=flat-square" alt="Claude Code SDK">
+  <img src="https://img.shields.io/badge/lark--oapi-latest-4A90D9?style=flat-square" alt="Lark OAPI">
+  <img src="https://img.shields.io/badge/memory-file--system-2ECC71?style=flat-square" alt="Memory">
+  <img src="https://img.shields.io/badge/output-Feishu_Card-34C759?style=flat-square" alt="Output">
+  <img src="https://img.shields.io/badge/Feishu-Bot-4285F4?style=flat-square&logo=bytedance&logoColor=white" alt="Feishu">
+</p>
+
+<p align="center">
   <a href="#快速开始">Quick Start</a> · <a href="#架构">Architecture</a> · <a href="#自主-agent">Autonomous Agents</a> · <a href="#配置">Configuration</a>
 </p>
 
