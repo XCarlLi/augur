@@ -8,7 +8,7 @@
   <a href="#快速开始"><img src="https://img.shields.io/badge/Quick_Start-5_MIN-blue?style=flat-square" alt="Quick Start"></a>
   <a href="#特性"><img src="https://img.shields.io/badge/Features-6_Modules-green?style=flat-square" alt="Features"></a>
   <a href="#自主-agent"><img src="https://img.shields.io/badge/Agents-4_Autonomous-orange?style=flat-square" alt="Agents"></a>
-  <a href="#配置"><img src="https://img.shields.io/badge/License-MIT-gray?style=flat-square" alt="License"></a>
+  <a href="#许可"><img src="https://img.shields.io/badge/License-Apache_2.0-gray?style=flat-square" alt="License"></a>
 </p>
 
 <p align="center">
@@ -16,7 +16,6 @@
   <img src="https://img.shields.io/badge/claude--code--sdk-latest-6B4FBB?style=flat-square" alt="Claude Code SDK">
   <img src="https://img.shields.io/badge/lark--oapi-latest-4A90D9?style=flat-square" alt="Lark OAPI">
   <img src="https://img.shields.io/badge/memory-file--system-2ECC71?style=flat-square" alt="Memory">
-  <img src="https://img.shields.io/badge/output-Feishu_Card-34C759?style=flat-square" alt="Output">
   <img src="https://img.shields.io/badge/Feishu-Bot-4285F4?style=flat-square&logo=bytedance&logoColor=white" alt="Feishu">
 </p>
 
@@ -272,4 +271,16 @@ default_soul = "balanced"
 
 ## 许可
 
-MIT
+Copyright 2026 XCarlLi
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+> http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
