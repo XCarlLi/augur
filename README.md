@@ -9,13 +9,6 @@
 </p>
 
 <p align="center">
-  <a href="#快速开始"><img src="https://img.shields.io/badge/Quick_Start-5_MIN-blue?style=flat-square" alt="Quick Start"></a>
-  <a href="#特性"><img src="https://img.shields.io/badge/Features-6_Modules-green?style=flat-square" alt="Features"></a>
-  <a href="#自主-agent"><img src="https://img.shields.io/badge/Agents-4_Autonomous-orange?style=flat-square" alt="Agents"></a>
-  <a href="#许可"><img src="https://img.shields.io/badge/License-Apache_2.0-gray?style=flat-square" alt="License"></a>
-</p>
-
-<p align="center">
   <img src="https://img.shields.io/badge/python-≥3.12-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python">
   <img src="https://img.shields.io/badge/claude--code--sdk-latest-6B4FBB?style=flat-square" alt="Claude Code SDK">
   <img src="https://img.shields.io/badge/lark--oapi-latest-4A90D9?style=flat-square" alt="Lark OAPI">
@@ -33,85 +26,13 @@
 
 > 《周易·系辞下》曰：**「知几其神乎。几者，动之微，吉之先见者也。君子见几而作，不俟终日。」**
 >
-> *To perceive the incipient is truly divine. The incipient is the subtlest beginning of movement, the first visible sign of what is to come. The noble person perceives it and acts — not waiting for the end of the day.*
 
-「知几」—— 取义于此。不是被动等待指令的工具，而是能观察、能记忆、能自主思考的伙伴。
+「知几」—— 取义于此。
 
 它会记住你说过的话，沉淀你们共同的发现，在清晨为你整理日程，在午间替你探索世界，在深夜把一天的对话化为日记。你不找它时，它在自己读书、思考；你找它时，它带着对你的了解回应。
 
 ---
 
-## 特性
-
-<table>
-<tr>
-<td width="33%" valign="top">
-
-### 三层记忆
-
-**Identity** — 全量注入：性格、偏好、规则\
-**Knowledge** — 索引加载：认知沉淀、月度摘要\
-**Journal** — 路径加载：14天日志窗口，旧日志可搜索
-
-记忆按目录结构自动组织，无需手动管理。
-
-</td>
-<td width="33%" valign="top">
-
-### Soul 人格系统
-
-四种内置性格模板：\
-`balanced` · `friendly` · `efficient` · `professional`
-
-聊天中随时切换。Soul 只影响对话风格，不改变记忆结构或功能行为。
-
-</td>
-<td width="33%" valign="top">
-
-### 自主 Agent
-
-四个定时 Agent 在后台运行：
-
-| Agent | 时间 |
-|-------|------|
-| 晨间摘要 | 每日 08:00 |
-| 自主探索 | 09:00 / 12:00 / 18:00 |
-| 夜间日记 | 00:05 |
-| 月度摘要 | 每月 1 日 |
-
-聊天中发送 `开启探索` / `关闭探索` 即时控制。
-
-</td>
-</tr>
-</table>
-
-<table>
-<tr>
-<td width="33%" valign="top">
-
-### 多用户隔离
-
-每个用户独立的记忆空间。用户 A 无法读取用户 B 的数据。首次发消息自动初始化。
-
-</td>
-<td width="33%" valign="top">
-
-### 平台解耦
-
-核心逻辑与平台无关。当前适配飞书，未来可扩展钉钉、企业微信 —— 只需新增适配器。
-
-</td>
-<td width="33%" valign="top">
-
-### 零外部依赖
-
-调度器基于 `asyncio.call_later()`，记忆用纯文件系统。除 `lark-oapi` 和 `claude-code-sdk` 外无其他依赖。
-
-</td>
-</tr>
-</table>
-
----
 
 ## 快速开始
 
